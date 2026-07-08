@@ -1,9 +1,10 @@
-# [ClipForge]
+# ClipForge
 
 A full-stack SaaS platform for video upload & compression and social media image resizing — built with Next.js, Cloudinary, Clerk, and Prisma.
 
-## Features
+🔗 **Live Demo:** [clipforge-livid-eight.vercel.app](https://clipforge-livid-eight.vercel.app/home)
 
+## Features
 - 🔐 **Authentication** — Secure sign-up/sign-in powered by Clerk
 - 🎥 **Video Upload & Compression** — Upload videos, automatically compressed and optimized via Cloudinary
 - 🖼️ **Social Media Image Resizer** — Upload one image, instantly reformat it for Instagram, Twitter, and Facebook using smart auto-cropping (Cloudinary gravity detection)
@@ -27,7 +28,6 @@ A full-stack SaaS platform for video upload & compression and social media image
 - [Clerk](https://clerk.com/)
 
 ## Project Structure
-
 ```
 app/
 ├── (app)/                  # Authenticated app routes
@@ -44,14 +44,11 @@ app/
 │   └── videos/
 ├── layout.tsx               # Root layout (ClerkProvider, Toaster)
 └── globals.css
-
 components/
 └── VideoCard.tsx
-
 prisma/
 ├── schema.prisma
 └── migrations/
-
 types/
 └── index.ts
 ```
@@ -59,29 +56,24 @@ types/
 ## Getting Started
 
 ### Prerequisites
-
 - Node.js 18+
 - A PostgreSQL database (e.g. [Neon](https://neon.tech/) or [Supabase](https://supabase.com/))
 - A [Cloudinary](https://cloudinary.com/) account
 - A [Clerk](https://clerk.com/) account
 
 ### 1. Clone the repo
-
 ```bash
 git clone https://github.com/yourusername/your-repo-name.git
 cd your-repo-name
 ```
 
 ### 2. Install dependencies
-
 ```bash
 npm install
 ```
 
 ### 3. Set up environment variables
-
 Create a `.env` file in the root directory:
-
 ```env
 # Database
 DATABASE_URL="postgresql://user:password@host:5432/dbname"
@@ -97,24 +89,19 @@ CLERK_SECRET_KEY=your_secret_key
 ```
 
 ### 4. Run Prisma migrations
-
 ```bash
 npx prisma migrate dev
 npx prisma generate
 ```
 
 ### 5. Run the dev server
-
 ```bash
 npm run dev
 ```
-
 Visit [http://localhost:3000](http://localhost:3000).
 
 ## Deployment
-
-This project is designed to deploy on [Vercel](https://vercel.com/):
-
+This project is deployed on [Vercel](https://vercel.com/):
 1. Push your code to GitHub
 2. Import the repo on Vercel
 3. Add all environment variables listed above in your Vercel project settings
@@ -129,12 +116,10 @@ This project is designed to deploy on [Vercel](https://vercel.com/):
 > **Note:** Your `DATABASE_URL` must point to a hosted Postgres instance, not `localhost` — Vercel's servers need to reach it over the internet.
 
 ## Roadmap
-
 - [ ] Video comments & likes
 - [ ] User profile pages
 - [ ] Search & filtering
 - [ ] Video playback analytics
 
 ## License
-
 This project was built for educational and portfolio purposes.
